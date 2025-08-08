@@ -1,0 +1,14 @@
+import SiteShell from "@/components/site-shell"
+
+export default function Page() {
+  return (
+    <SiteShell>
+      <section className="container mx-auto px-4 py-10 max-w-3xl">
+        <h1 className="text-2xl md:text-3xl font-bold">Política de Privacidade</h1>
+        <p className="mt-3 text-muted-foreground">
+          Esta é uma política de privacidade modelo. Substitua pelo conteúdo legal definitivo.
+        </p>
+      </section>
+    </SiteShell>
+  )
+}
