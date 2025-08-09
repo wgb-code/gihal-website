@@ -1,11 +1,9 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { gsap, ScrollTrigger } from "@/lib/gsap"
 import ProductCard, { type Product } from "@/components/product-card"
 
-gsap.registerPlugin(ScrollTrigger)
 
 type Props = {
   items: Product[]
@@ -24,15 +22,19 @@ export default function HighlightsGrid({
 
   useEffect(() => {
     const root = rootRef.current
-    if (!root) return
+
+    if (!root) {
+      return
+    }
 
     const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches
-    if (reduce) return
+    if (reduce) {
+      return
+    }
 
-    // Context para escopo/cleanup
     const ctx = gsap.context(() => {
-      // Anima título e link
       const header = root.querySelector("[data-anim='header']")
+
       if (header) {
         gsap.fromTo(
           header,
@@ -50,10 +52,8 @@ export default function HighlightsGrid({
         )
       }
 
-      // Seleciona os wrappers dos cards
       const cards = gsap.utils.toArray<HTMLElement>(root.querySelectorAll("[data-anim='card']"))
 
-      // Stagger nos cards
       gsap.fromTo(
         cards,
         { y: 18, opacity: 0 },
@@ -70,7 +70,6 @@ export default function HighlightsGrid({
         }
       )
 
-      // Sutil parallax/scale nas imagens dos cards
       cards.forEach((c) => {
         const img = c.querySelector("img")
         if (!img) return

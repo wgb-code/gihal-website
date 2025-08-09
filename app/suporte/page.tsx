@@ -1,5 +1,5 @@
 import SiteShell from "@/components/site-shell"
-import { faq } from "@/lib/data"
+import { supportFaq } from "@/lib/data"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export default function Page() {
@@ -10,10 +10,10 @@ export default function Page() {
         <p className="mt-2 text-muted-foreground">Assistência técnica, peças e manuais para manter sua operação no topo.</p>
         <div className="mt-6">
           <Accordion type="single" collapsible>
-            {faq.map((f, i) => (
-              <AccordionItem key={i} value={`faq-${i}`}>
-                <AccordionTrigger>{f.q}</AccordionTrigger>
-                <AccordionContent>{f.a}</AccordionContent>
+            {supportFaq.map((faqItem, index) => (
+              <AccordionItem key={index} value={`faq-${index}`}>
+                <AccordionTrigger>{faqItem.question}</AccordionTrigger>
+                <AccordionContent>{faqItem.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

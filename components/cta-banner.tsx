@@ -12,7 +12,12 @@ export default function CtaBanner() {
             <Button variant="secondary" size="lg" className="bg-white text-green-700 hover:bg-gray-100">Fale com um Consultor</Button>
           </Link>
           <Link href="/produtos">
-            <Button size="lg" className="bg-black/20 hover:bg-black/30 border-white">Baixar Catálogo</Button>
+            <Button
+              size="lg"
+              className="bg-transparent border-2 border-white text-white hover:bg-transparent hover:border-white"
+            >
+              Baixar Catálogo
+            </Button>
           </Link>
         </div>
       </div>

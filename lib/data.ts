@@ -74,14 +74,60 @@ export const produtos: ProductFull[] = [
 
 export const categorias = Array.from(new Set(produtos.map((p) => p.categoria)))
 
-export const revendedores = [
-  { nome: "AgroSul Máquinas", cidade: "Carazinho - RS", telefone: "(54) 3333-0000", email: "contato@agrosul.com.br" },
-  { nome: "Campo Forte Equipamentos", cidade: "Cascavel - PR", telefone: "(45) 3020-1234", email: "vendas@campoforte.com.br" },
-  { nome: "Agro Norte", cidade: "Sorriso - MT", telefone: "(66) 3545-9988", email: "comercial@agronorte.com" },
+export type Revendedor = {
+  nome: string
+  cidade: string
+  telefone?: string
+  email?: string
+  lat?: number
+  lng?: number
+}
+
+export const revendedores: Revendedor[] = [
+  {
+    nome: "AgroSul Máquinas",
+    cidade: "Carazinho - RS",
+    telefone: "(54) 3333-0000",
+    email: "contato@agrosul.com.br",
+    lat: -28.2822,
+    lng: -52.7861,
+  },
+  {
+    nome: "Campo Forte Equipamentos",
+    cidade: "Cascavel - PR",
+    telefone: "(45) 3020-1234",
+    email: "vendas@campoforte.com.br",
+    lat: -24.9555,
+    lng: -53.4552,
+  },
+  {
+    nome: "Agro Norte",
+    cidade: "Sorriso - MT",
+    telefone: "(66) 3545-9988",
+    email: "comercial@agronorte.com",
+    lat: -12.5425,
+    lng: -55.7217,
+  },
 ]
 
-export const faq = [
-  { q: "Como solicitar orçamento?", a: "Acesse a página de Contato e selecione o produto. Nossa equipe retornará rapidamente." },
-  { q: "Há peças de reposição?", a: "Sim, trabalhamos com estoque e rede de revendedores para garantir disponibilidade." },
-  { q: "A GIHAL exporta?", a: "Sim, já atendemos Uruguai, Paraguai, China e estudamos novos mercados." },
+export type FaqItem = {
+  question: string
+  answer: string
+}
+
+export const supportFaq: FaqItem[] = [
+  {
+    question: "Como solicitar orçamento?",
+    answer:
+      "Acesse a página de Contato e selecione o produto. Nossa equipe retornará rapidamente.",
+  },
+  {
+    question: "Há peças de reposição?",
+    answer:
+      "Sim, trabalhamos com estoque e rede de revendedores para garantir disponibilidade.",
+  },
+  {
+    question: "A GIHAL exporta?",
+    answer: "Sim, já atendemos Uruguai, Paraguai, China e estudamos novos mercados.",
+  },
 ]
