@@ -84,30 +84,156 @@ export type Revendedor = {
 }
 
 export const revendedores: Revendedor[] = [
+  /**
+   *  Rio Grande do Sul - RS
+  */
   {
-    nome: "AgroSul Máquinas",
-    cidade: "Carazinho - RS",
-    telefone: "(54) 3333-0000",
-    email: "contato@agrosul.com.br",
-    lat: -28.2822,
-    lng: -52.7861,
+    nome: "GN TRATORES",
+    cidade: "Agudo - RS",
+    telefone: "(55) 3265-3272",
+    email: "gelsonabilio@terra.com.br",
+    lat: -29.647044013309316,
+    lng: -53.23772784576613
   },
   {
-    nome: "Campo Forte Equipamentos",
-    cidade: "Cascavel - PR",
-    telefone: "(45) 3020-1234",
-    email: "vendas@campoforte.com.br",
-    lat: -24.9555,
-    lng: -53.4552,
+    nome: "COMERCIAL AGRÍCOLA KOLLER LTDA",
+    cidade: "Ajuricaba - RS",
+    telefone: "(55) 9955-1380",
+    email: "egidiokoller@gmail.com",
+    lat: -28.239262839979716,
+    lng: -53.772628441881764
   },
   {
-    nome: "Agro Norte",
-    cidade: "Sorriso - MT",
-    telefone: "(66) 3545-9988",
-    email: "comercial@agronorte.com",
-    lat: -12.5425,
-    lng: -55.7217,
+    nome: "COMERCIAL FERMAPE",
+    cidade: "Boa Vista do Cadeado - RS",
+    telefone: "(55) 3851-1818",
+    email: "",
+    lat: -28.5776404979927,
+    lng: -53.811612143841025
   },
+  {
+    nome: "AGROPECUÁRIA BOM GOSTO",
+    cidade: "Cacique Doble - RS",
+    telefone: "(54) 3552-1345",
+    email: "",
+    lat: -27.770160622661642,
+    lng: -51.66219803542872
+  },
+  {
+    nome: "ROCHA EQUIPAMENTOS AGRÍCOLAS",
+    cidade: "Camaquã - RS",
+    telefone: "(51) 3671-6997",
+    email: "rochaeqagricolas@gmail.com",
+    lat: -30.86289718262266,
+    lng: -51.82588164387082
+  },
+  {
+    nome: "FERRARIA DO COLONO LTDA",
+    cidade: "Camaquã - RS",
+    telefone: "(51) 3671-2826",
+    email: "",
+    lat: -30.846445438272287,
+    lng: -51.809038420806765
+  },
+  {
+    nome: "AGROCAMPO COM E REP",
+    cidade: "Campina das Missões - RS",
+    telefone: "(55) 99623-2621",
+    email: "",
+    lat: -30.33036855657104,
+    lng: -54.32901271124797
+  },
+  {
+    nome: "AGRI PEÇAS",
+    cidade: "Canguçu - RS",
+    telefone: "(53) 9971-7701",
+    email: "agripecas@yahoo.com.br",
+    lat: -31.387534680394385,
+    lng: -52.68169191686339
+  },
+  {
+    nome: "AGM MISSÕES IMPLEMENTOS E PEÇAS LTDA",
+    cidade: "Cerro Largo - RS",
+    telefone: "(55) 3359-1166",
+    email: "agmmissoes@hotmail.com",
+    lat: -28.146937754845677,
+    lng: -54.733906989999156
+  },
+  {
+    nome: "MONTEIRO & CARGNELUTTI",
+    cidade: "Coronel Bicaco - RS",
+    telefone: "(55) 3557-1311",
+    email: "gladis.weber@hotmail.com",
+    lat: -27.7173814898605,
+    lng: -53.70973304232896
+  },
+  /**
+   * Santa Catarina - SC
+  */
+  {
+    nome: "PIAZZA COMERCIO DE TRATORES E MÁQUINAS AGRÍCOLAS LTDA",
+    cidade: "Chapecó - SC",
+    telefone: "(49) 204-91900",
+    email: "atendimento@piazzatratores.com.br",
+    lat: -27.085931142292075,
+    lng: -52.621470774695155
+  },
+  {
+    nome: "TRATOR PEÇAS CHAPECÓ LTDA",
+    cidade: "Chapecó - SC",
+    telefone: "(49) 3361-2400",
+    email: "",
+    lat: -27.090424189675858,
+    lng: -52.622055974694625
+  },
+  {
+    nome: "MEAGRO MEC. AGRÍCOLA DE TRATORES LTDA",
+    cidade: "Herval do Oeste - SC",
+    telefone: "(49) 3554-0070",
+    email: "andersongluzezak@hotmail.com",
+    lat: -27.17172841141796,
+    lng: -51.49687011702079
+  },
+  {
+    nome: "AGRO RIBEIRO COM. PEÇAS AGRIIC. LTDA",
+    cidade: "Lebon Regis - SC",
+    telefone: "(49) 3247-1061",
+    email: "agroribeirocomercios@hotmail.com",
+    lat: -27.566915207149073,
+    lng: -50.814382596239014
+  },
+  {
+    nome: "EDILSON MÁQUINAS",
+    cidade: "Ouro - SC",
+    telefone: "(49) 3439-0191",
+    email: "edilson_schranck@hotmail.com",
+    lat: -27.257286448613463,
+    lng: -51.73342819612846
+  },
+  {
+    nome: "WALTER AGROPECUARIA",
+    cidade: "Seara - SC",
+    telefone: "(49) 3452-2124",
+    email: "comerical@agrowalter.com.br",
+    lat: -27.14908538175872,
+    lng: -52.30917722921955
+  },
+  {
+    nome: "COOPERURUBICI",
+    cidade: "Urubici - SC",
+    telefone: "(49) 3278-4000",
+    email: "rodonei@cooperurubici.com",
+    lat: -27.991634027759932,
+    lng: -49.578119803498375
+  },
+  {
+    nome: "ALESSI AGROPECUARIA LTDA",
+    cidade: "Xaxim - SC",
+    telefone: "(49) 3353-1622",
+    email: "alessi@alessiagropecuaria.com.br",
+    lat: -26.960759169731865,
+    lng: -52.53588357654795
+  }
 ]
 
 export type FaqItem = {
