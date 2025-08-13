@@ -1,0 +1,139 @@
+---
+description: Regras de desenvolvimento Next.js para projetos frontend seguindo padrões de desenvolvedor senior
+globs: 
+  - "**/*.{ts,tsx,js,jsx}"
+  - "**/*.{css,scss,sass}"
+  - "**/page.tsx"
+  - "**/layout.tsx"
+  - "**/loading.tsx"
+  - "**/error.tsx"
+  - "**/not-found.tsx"
+alwaysApply: true
+---
+
+# Regras de Desenvolvimento Next.js - Frontend Senior
+
+## Estrutura e Arquitetura
+
+### Organização de Pastas
+- Use a estrutura App Router do Next.js 13+ (`app/` directory)
+- Organize componentes em: `components/ui/`, `components/forms/`, `components/layout/`
+- Mantenha utilitários em: `lib/`, `utils/`, `hooks/`
+- Separe tipos em: `types/` ou `@types/`
+- Jamais use lógica, layout, validações no mesmo arquivo, separe em `hooks`, `controller`, `validations` etc...
+
+### Nomenclatura
+- **Componentes**: PascalCase (`UserProfile.tsx`)
+- **Páginas**: kebab-case para rotas (`user-profile/page.tsx`)
+- **Hooks customizados**: prefixo `use` (`useLocalStorage.ts`)
+- **Utilitários**: camelCase (`formatCurrency.ts`)
+- **Constantes**: SNAKE_CASE (`API_ENDPOINTS.ts`)
+
+## ⚛️ Componentes React
+
+### Estrutura de Componentes
+```typescript
+// 1. Imports (React, Next.js, third-party, local)
+// 2. Types/Interfaces
+// 3. Component definition
+// 4. Default export
+```
+
+### Boas Práticas
+- **SEMPRE** use TypeScript com tipagem explícita
+- Prefira `interface` sobre `type` para props de componentes
+- Use `React.FC` apenas quando necessário (props com children)
+- Implemente error boundaries para componentes críticos
+- Use `forwardRef` quando necessário para refs
+- Evite `any` - use `unknown` ou tipos específicos
+- Crie funções, const e componentes que possa ser reutilizados para manter a consistencia do layout
+
+### Performance
+- Use `React.memo()` para componentes que recebem props complexas
+- Implemente `useMemo()` e `useCallback()` para computações custosas
+- Use `lazy loading` com `React.lazy()` e `Suspense`
+- Otimize re-renders desnecessários
+
+## 🔄 Estado e Dados
+
+### Gerenciamento de Estado
+- **Estado local**: `useState`, `useReducer`
+- **Estado global**: Zustand ou Redux Toolkit (evite Context API para estado global)
+- **Estado do servidor**: TanStack Query (React Query) ou SWR
+- **Formulários**: React Hook Form + Zod para validação
+
+### Fetching de Dados
+- Use Server Components quando possível
+- Implemente loading e error states
+- Use `use()` hook para promises no React 18+
+- Configure revalidação adequada (`revalidate`, `tags`)
+
+## 🎨 Styling e UI
+
+### CSS/Styling
+- **Preferência**: Tailwind CSS com classes utilitárias
+- **Componentes**: shadcn/ui como base
+- Implemente dark mode com `next-themes` quando for pedido.
+- Configure responsive design (mobile-first)
+
+### Acessibilidade
+- **SEMPRE** implemente atributos ARIA adequados
+- Use semantic HTML (`header`, `main`, `nav`, `section`)
+- Teste navegação por teclado
+- Configure contrast ratios adequados
+- Implemente focus management
+
+## 🛣️ Routing e Navegação
+
+### App Router (Next.js 13+)
+- Use `page.tsx` para páginas
+- `layout.tsx` para layouts aninhados
+- `loading.tsx` para estados de carregamento
+- `error.tsx` para tratamento de erros
+- `not-found.tsx` para páginas 404
+
+### Navegação
+- Use `useRouter()` do `next/navigation`
+- Implemente breadcrumbs para navegação complexa
+- Configure middleware para autenticação/autorização
+
+## 📊 Performance e SEO
+
+### Otimizações Next.js
+- Use `next/image` para otimização automática
+- Configure `next/font` para web fonts
+- Implemente ISR (Incremental Static Regeneration) quando apropriado
+- Use `generateStaticParams` para rotas dinâmicas
+
+### SEO
+- Configure `metadata` API em cada página
+- Implemente Open Graph e Twitter Cards
+- Use structured data (JSON-LD)
+- Configure sitemap.xml e robots.txt
+
+## 🔒 Segurança e Validação
+
+### Validação
+- **SEMPRE** valide dados no cliente E servidor
+- Use Zod para schemas de validação
+- Sanitize inputs do usuário
+- Implemente rate limiting
+
+### Autenticação
+- Configure CSRF protection
+- Use cookies httpOnly para tokens
+
+## 🚫 Evite Sempre
+
+- Mutação direta de state
+- Props drilling excessivo
+- Componentes com mais de 200 linhas
+- useEffect para lógica que deveria estar em event handlers
+- Imports absolutos sem aliases configurados
+- Console.log em código de produção
+- Componentes anônimos em JSX
+- Estados desnecessários (derive quando possível)
+- Comentários desnecessários quando o código é auto explicativo e facil de interpretar
+- Instalar bibliotecas, sempre sugira a instalação quando necessario, mas não instale
+
+> **Lembre-se**: Essas regras devem ser seguidas SEMPRE. Em caso de dúvida, priorize legibilidade, performance e manutenibilidade do código.

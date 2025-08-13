@@ -2,7 +2,7 @@
 
 import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
-import { revendedores } from "@/lib/data"
+import { revendedores } from "@/lib/revendedores-data"
 
 export default function DealersMap() {
   const mapInitialCenter: [number, number] = [-14.235004, -51.92528]

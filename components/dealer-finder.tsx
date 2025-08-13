@@ -5,7 +5,8 @@ import { useEffect, useMemo, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { formatCepMask, haversineDistanceKm, keepOnlyDigits } from "@/lib/utils"
-import { revendedores, type Revendedor } from "@/lib/data"
+import { revendedores } from "@/lib/revendedores-data"
+import type { Revendedor } from "@/types/revendedores"
 
 type ViaCepResponse = {
     cep: string
@@ -84,10 +85,10 @@ async function geocodeCityStateToCoords(city: string, state: string): Promise<{ 
         if (!results.length) {
             return null
         }
-        
-        return { 
-            lat: parseFloat(results[0].lat), 
-            lng: parseFloat(results[0].lon) 
+
+        return {
+            lat: parseFloat(results[0].lat),
+            lng: parseFloat(results[0].lon)
         }
     } catch {
         return null
@@ -134,7 +135,7 @@ export default function DealerFinder() {
         setNearestResult(null)
 
         const cepDigits = keepOnlyDigits(cepMasked)
-        
+
         if (cepDigits.length !== 8) {
             return
         }
@@ -155,7 +156,7 @@ export default function DealerFinder() {
             }
 
             const nearest = computeNearestReseller(coordinates, revendedores)
-            
+
             if (!nearest.reseller) {
                 throw new Error("Nenhum revendedor disponível para calcular distância")
             }
@@ -171,7 +172,7 @@ export default function DealerFinder() {
 
     useEffect(() => {
         const digits = keepOnlyDigits(cepMasked)
-        
+
         if (digits.length === 8 && !isLoading) {
             handleSearch()
         }

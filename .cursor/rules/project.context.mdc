@@ -1,0 +1,56 @@
+---
+description: Contexto completo do projeto Gihal - Site institucional para indústria de implementos agrícolas
+globs: 
+alwaysApply: true
+---
+
+### O Negócio da Empresa e Seu Público-Alvo
+
+A Gihal Indústria de Implementos Agrícolas Ltda. é uma empresa brasileira com mais de 30 anos de atuação no mercado de máquinas e implementos agrícolas. Sua principal atividade é a fabricação e comercialização de plantadeiras, semeadeiras, e outros equipamentos como patrolas, carretas agrícolas, vagões forrageiros e flutuadores laterais automáticos. A empresa se destaca por oferecer produtos de alta qualidade e robustez a preços competitivos, buscando constantemente a inovação e a expansão para mercados nacionais e internacionais.
+
+**Público-Alvo:** O público-alvo da Gihal são principalmente **agricultores de médio e grande porte**, cooperativas agrícolas, e talvez até mesmo prefeituras (devido às patrolas). São clientes que buscam equipamentos agrícolas eficientes, duráveis e com bom custo-benefício para otimizar suas operações de plantio, colheita e manejo de solo. Este público valoriza a tradição, a confiabilidade, o suporte técnico e a inovação que se traduz em produtividade e rentabilidade no campo.
+
+### Pontos Fortes e Diferenciais da GIHAL
+
+-   **Tradição e Experiência:** Mais de 30 anos de atuação no mercado, conferindo um profundo conhecimento do setor e credibilidade.
+-   **Qualidade e Robustez:** Compromisso com a fabricação de implementos agrícolas de alta durabilidade e desempenho.
+-   **Preço Competitivo:** Estratégia de oferecer produtos de qualidade com preços acessíveis, tornando-os atrativos para um amplo espectro de agricultores.
+-   **Inovação e Desenvolvimento:** Busca contínua por novas tecnologias e produtos, como o flutuador lateral automático, com apoio de instituições como a FINEP.
+-   **Expansão Internacional:** Presença e prospecção ativa em mercados globais, demonstrando ambição e capacidade de adaptação.
+-   **Foco na Sustentabilidade:** Missão de contribuir para o desenvolvimento da agricultura sustentável através de tecnologia moderna e eficiente.
+-   **Rede de Revendedores:** Uma rede de revendedores que oferece suporte e acesso aos produtos em diversas regiões.
+
+### Pontos que Precisam de Atenção ou Reformulação no Site
+
+-   **Design Datado:** O layout atual não reflete a modernidade e a inovação que a empresa busca transmitir. A estética é simples e carece de elementos visuais dinâmicos e imersivos.
+-   **Experiência do Usuário (UX) Limitada:** A navegação é básica, sem recursos como menus "sticky" ou "breadcrumbs" que facilitariam a exploração. A apresentação de produtos é estática, sem vídeos em ação ou galerias interativas.
+-   **CTAs Genéricas:** As chamadas para ação são pouco persuasivas e não direcionam o usuário de forma eficaz para a próxima etapa na jornada de compra ou interação.
+-   **Conteúdo Visual Subutilizado:** Embora as imagens dos produtos sejam boas, a forma como são apresentadas não as valoriza. Há uma oportunidade de usar vídeos e infográficos para demonstrar a funcionalidade e os benefícios dos equipamentos.
+-   **Destaque Insuficiente dos Diferenciais:** Os pontos fortes da Gihal (tradição, inovação, qualidade) não são suficientemente destacados ou comunicados de forma impactante no site.
+-   **Falta de Prova Social:** A ausência de depoimentos de clientes, estudos de caso ou dados de desempenho dos produtos limita a construção de confiança e prova social.
+
+### O que Precisa Ser Feito para Estar no Mesmo Nível ou Acima da Concorrência
+
+Para que o site da Gihal esteja no mesmo nível ou supere a concorrência, especialmente a New Holland, é fundamental investir em:
+
+1.  **Renovação Completa do Design:** Adotar um design moderno, responsivo e visualmente impactante, com foco em uma experiência de usuário imersiva. Isso inclui uma paleta de cores atualizada, tipografia contemporânea e o uso inteligente de espaços em branco.
+2.  **Conteúdo Multimídia de Alta Qualidade:** Priorizar vídeos de alta resolução mostrando os produtos em operação, galerias de imagens interativas, e, se possível, visualizações 3D ou realidade aumentada dos equipamentos.
+3.  **Navegação Otimizada:** Implementar um menu de navegação mais robusto e intuitivo, com submenus claros, filtros de produtos e um menu "sticky".
+4.  **CTAs Estratégicas e Persuasivas:** Reformular todas as chamadas para ação para que sejam mais específicas, orientadas para a conversão e posicionadas de forma proeminente.
+5.  **Seções de Destaque para Diferenciais:** Criar seções dedicadas a apresentar a história da empresa de forma envolvente, destacar as tecnologias e inovações, e exibir certificações e prêmios.
+6.  **Inclusão de Prova Social:** Adicionar depoimentos de clientes satisfeitos, estudos de caso e dados de desempenho dos produtos para construir confiança e credibilidade.
+7.  **Conteúdo de Valor:** Desenvolver um blog com artigos relevantes para o setor agrícola, dicas e notícias, posicionando a Gihal como uma fonte de conhecimento.
+8.  **Ferramentas Interativas:** Considerar a implementação de ferramentas como um comparador de produtos ou um simulador de financiamento para agregar valor à experiência do usuário.
+
+### Recursos que Funcionaram nos Concorrentes e Como Adaptá-los para a GIHAL
+
+-   **Vídeos Imersivos na Página Inicial (New Holland, Massey Ferguson):** Adaptar para a Gihal com vídeos de alta qualidade de seus próprios implementos em ação no campo brasileiro, transmitindo a robustez e eficiência dos produtos em seu ambiente natural.
+-   **Navegação "Sticky" e Submenus (Massey Ferguson, Stara, New Holland):** Implementar um menu de navegação fixo no topo da página e organizar os produtos em categorias e subcategorias claras, facilitando a exploração do catálogo.
+-   **Seções de Tecnologia e Inovação (Massey Ferguson, Stara, New Holland):** Criar uma seção "Tecnologia Gihal" que explique de forma didática os diferenciais tecnológicos dos produtos, talvez com infográficos animados ou vídeos curtos.
+-   **Depoimentos de Clientes e Casos de Sucesso (Stara, Massey Ferguson):** Desenvolver uma seção de "Histórias de Sucesso" com depoimentos de agricultores que utilizam os produtos Gihal, incluindo fotos e, se possível, vídeos. Isso humaniza a marca e gera identificação.
+-   **CTAs Orientadas à Conversão (Todos os Concorrentes):** Substituir CTAs genéricas por frases como "Solicite um Orçamento", "Agende uma Visita Técnica", "Baixe o Catálogo" ou "Fale com um Consultor via WhatsApp", tornando a intenção da ação clara e o caminho para a conversão mais direto.
+-   **Design Minimalista e Foco no Essencial (New Holland):** Simplificar o layout, utilizando mais espaços em branco e priorizando a informação mais relevante em cada seção. Isso evita a sobrecarga de informações e melhora a legibilidade.
+-   **Blog/Notícias com Conteúdo de Valor (Massey Ferguson, Stara):** Expandir a seção de notícias para um blog com artigos sobre as últimas tendências do agronegócio, dicas de manejo, e informações sobre os produtos Gihal, posicionando a empresa como uma autoridade no setor.
+-   **Ferramentas de Comparação de Produtos (New Holland):** Desenvolver uma ferramenta simples que permita ao usuário comparar as especificações técnicas de diferentes implementos Gihal, auxiliando na decisão de compra.
+
+Ao integrar esses elementos e estratégias, a Gihal pode transformar seu site em uma ferramenta poderosa de marketing e vendas, que não apenas apresenta seus produtos, mas também educa, engaja e converte visitantes em clientes satisfeitos, reforçando sua posição de destaque no mercado agrícola.
