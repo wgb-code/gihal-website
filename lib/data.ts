@@ -107,7 +107,7 @@ export const revendedores: Revendedor[] = [
     nome: "COMERCIAL FERMAPE",
     cidade: "Boa Vista do Cadeado - RS",
     telefone: "(55) 3851-1818",
-    email: "",
+    email: "mecenioigai@hotmail.com",
     lat: -28.5776404979927,
     lng: -53.811612143841025
   },
@@ -115,7 +115,7 @@ export const revendedores: Revendedor[] = [
     nome: "AGROPECUÁRIA BOM GOSTO",
     cidade: "Cacique Doble - RS",
     telefone: "(54) 3552-1345",
-    email: "",
+    email: "fabiandm82@gmail.com",
     lat: -27.770160622661642,
     lng: -51.66219803542872
   },
@@ -139,7 +139,7 @@ export const revendedores: Revendedor[] = [
     nome: "AGROCAMPO COM E REP",
     cidade: "Campina das Missões - RS",
     telefone: "(55) 99623-2621",
-    email: "",
+    email: "orgcontabilalternativa@gmail.com",
     lat: -30.33036855657104,
     lng: -54.32901271124797
   },
