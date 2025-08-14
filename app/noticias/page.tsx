@@ -1,4 +1,10 @@
 import SiteShell from "@/components/site-shell"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Notícias",
+  description: "Atualizações da GIHAL: lançamentos, tecnologia e mercados.",
+}
 
 const posts = [
   { slug: "lancamento-flutuador-automatico", titulo: "Flutuador lateral automático: tecnologia com apoio da FINEP", data: "2025-06-15" },

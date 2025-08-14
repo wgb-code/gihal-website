@@ -1,4 +1,8 @@
+"use client"
+
 import Link from "next/link"
+import Image from "next/image"
+import { trackEvent } from "@/lib/analytics"
 
 const posts = [
   {
@@ -29,13 +33,15 @@ export default function NewsCards() {
         <Link href="/noticias" className="text-sm text-green-700 hover:underline">Ver todas</Link>
       </div>
       <div className="grid md:grid-cols-3 gap-6 mt-6">
-        {posts.map((p) => (
-          <article key={p.slug} className="rounded-xl border overflow-hidden bg-white">
-            <img src={p.imagem || "/placeholder.svg"} alt={p.titulo} className="h-44 w-full object-cover" />
-            <div className="p-4">
+          {posts.map((p) => (
+            <article key={p.slug} className="rounded-xl border overflow-hidden bg-white">
+              <div className="relative h-44 w-full">
+                <Image src={p.imagem || "/placeholder.svg"} alt={p.titulo} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+              </div>
+              <div className="p-4">
               <div className="text-xs text-muted-foreground">{new Date(p.data).toLocaleDateString("pt-BR")}</div>
               <h3 className="mt-1 font-semibold">{p.titulo}</h3>
-              <Link href={`/noticias#${p.slug}`} className="text-sm mt-2 inline-block text-green-700 hover:underline">
+              <Link href={`/noticias#${p.slug}`} className="text-sm mt-2 inline-block text-green-700 hover:underline" onClick={() => trackEvent("cta_click", { cta: "news_leia_mais", slug: p.slug })}>
                 Leia mais
               </Link>
             </div>

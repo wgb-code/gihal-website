@@ -7,6 +7,11 @@ import Lenis from "lenis"
 
 export default function SmoothScrollProvider({ children }: PropsWithChildren) {
   useEffect(() => {
+    const prefersReduced = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
+    if (prefersReduced) {
+      return
+    }
+
     const lenis = new Lenis({
       duration: 1.1,
       easing: (t: number) => 1 - Math.pow(1 - t, 2),

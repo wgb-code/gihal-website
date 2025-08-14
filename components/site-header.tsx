@@ -6,6 +6,7 @@ import { Menu, Phone, MapPin } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
+import { trackEvent } from "@/lib/analytics"
 
 const nav = [
   { href: "/", label: "Home" },
@@ -67,13 +68,13 @@ export function SiteHeader() {
         </nav>
 
         <div className="ml-auto flex items-center gap-2">
-          <Link href="/revendedores">
+          <Link href="/revendedores" onClick={() => trackEvent("cta_click", { cta: "header_revendedores" })}>
             <Button variant="ghost" size="sm" className="hidden sm:flex">
               <MapPin className="h-4 w-4 mr-2" />
               Encontre um Revendedor
             </Button>
           </Link>
-          <Link href="/contato">
+          <Link href="/contato" onClick={() => trackEvent("cta_click", { cta: "header_contato" })}>
             <Button size="sm" className="bg-green-700 hover:bg-green-800 text-white">
               <Phone className="h-4 w-4 mr-2" />
               Fale Conosco

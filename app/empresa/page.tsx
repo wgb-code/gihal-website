@@ -1,20 +1,30 @@
 import SiteShell from "@/components/site-shell"
+import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Empresa",
+  description: "GIHAL: 30+ anos em implementos agrícolas com qualidade e inovação.",
+}
 
 export default function Page() {
   return (
     <SiteShell>
-      <section className="relative">
-        <img
-          src="/placeholder.svg?height=480&width=1600"
+      <section className="relative w-full h-64 md:h-80">
+        <Image
+          src="/gihal-fabrica-hero.webp"
           alt="Fábrica GIHAL"
-          className="w-full h-64 md:h-80 object-cover"
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority
         />
       </section>
       <section className="container mx-auto px-4 py-10 grid lg:grid-cols-2 gap-8">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold">Sobre a GIHAL</h1>
           <p className="mt-3 text-muted-foreground">
-            Fundada em 1994 em Carazinho (RS), a GIHAL iniciou transformando plantadeiras e semeadeiras convencionais para plantio direto. 
+            Fundada em 1994 em Carazinho (RS), a GIHAL iniciou transformando plantadeiras e semeadeiras convencionais para plantio direto.
             Desde 1996, produz e lança suas próprias máquinas, aliando qualidade, robustez e preços competitivos.
           </p>
           <p className="mt-3 text-muted-foreground">

@@ -3,7 +3,8 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { useLayoutEffect, useRef } from "react"
-import { gsap, ScrollTrigger } from "@/lib/gsap"
+import { gsap } from "@/lib/gsap"
+import { trackEvent } from "@/lib/analytics"
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement | null>(null)
@@ -11,8 +12,6 @@ export default function Hero() {
   const mediaRef = useRef<HTMLDivElement | null>(null)
 
   useLayoutEffect(() => {
-    // Garantir registro (idempotente)
-    // ensureGsapRegistered()
     const ctx = gsap.context(() => {
       if (textRef.current) {
         gsap.fromTo(
@@ -38,6 +37,7 @@ export default function Hero() {
 
     return () => ctx.revert()
   }, [])
+
   return (
     <section ref={sectionRef} className="relative select-none min-h-[100svh] overflow-hidden">
       <div ref={mediaRef} className="absolute inset-0 z-0 will-change-transform">
@@ -48,12 +48,13 @@ export default function Hero() {
           muted
           playsInline
           preload="metadata"
+          poster="/gihal-institutional-video-thumb.png"
           aria-hidden="true"
         >
           <source src="/background-video-gihal.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 z-10 pointer-events-none bg-green-950/40" />
+        <div className="absolute inset-0 z-10 pointer-events-none bg-green-950/70" />
         <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
       </div>
 
@@ -68,12 +69,12 @@ export default function Hero() {
           </p>
 
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <Link href="/produtos">
+            <Link href="/produtos" onClick={() => trackEvent("cta_click", { cta: "hero_produtos" })}>
               <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white">
                 Explore Nossos Produtos
               </Button>
             </Link>
-            <Link href="/revendedores">
+            <Link href="/revendedores" onClick={() => trackEvent("cta_click", { cta: "hero_revendedores" })}>
               <Button size="lg" variant="secondary" className="bg-white text-green-700 hover:bg-gray-100">
                 Encontre um Revendedor
               </Button>

@@ -1,4 +1,11 @@
 import SiteShell from "@/components/site-shell"
+import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Tecnologia",
+  description: "Conheça os diferenciais tecnológicos da GIHAL, como o flutuador lateral automático.",
+}
 
 export default function Page() {
   return (
@@ -9,8 +16,8 @@ export default function Page() {
           Soluções pensadas para quem nasceu pro agro. Conheça diferenciais como o flutuador lateral automático (desenvolvido com apoio da FINEP) e sistemas que elevam a produtividade.
         </p>
         <div className="grid md:grid-cols-2 gap-6 mt-8">
-          <div className="rounded-xl border overflow-hidden">
-            <img src="/placeholder.svg?height=400&width=800" alt="Flutuador lateral automático" className="w-full h-56 object-cover" />
+          <div className="rounded-xl border overflow-hidden relative h-56 w-full">
+            <Image src="/flutuador-lateral-automatico.jpg" alt="Flutuador lateral automático" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" priority />
             <div className="p-5">
               <h2 className="font-semibold">Flutuador Lateral Automático</h2>
               <p className="text-sm text-muted-foreground mt-2">
@@ -18,8 +25,8 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <div className="rounded-xl border overflow-hidden">
-            <img src="/placeholder.svg?height=400&width=800" alt="Tecnologia de precisão" className="w-full h-56 object-cover" />
+          <div className="rounded-xl border overflow-hidden relative h-56 w-full">
+            <Image src="/tecnologia-precisao.jpg" alt="Tecnologia de precisão" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
             <div className="p-5">
               <h2 className="font-semibold">Tecnologia de Precisão</h2>
               <p className="text-sm text-muted-foreground mt-2">
